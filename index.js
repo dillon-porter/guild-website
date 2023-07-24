@@ -6,7 +6,8 @@ menu.addEventListener("click", function() {
     menuLinks.classList.toggle("active");
 });
 
-// Smooth scrolling for navbar links and buttons
+// Smooth scrolling for navbar links and buttons //
+
 const navLinks = document.querySelectorAll(".nav-links, .nav-links-btn");
 
 navLinks.forEach(function(navLink) {
