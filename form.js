@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const monkSpecs = document.getElementById('monkSpecs');
     const hunterSpecs = document.getElementById('hunterSpecs');
     const shamanSpecs = document.getElementById('shamanSpecs');
+    const deathknightSpecs = document.getElementById('deathknightSpecs');
 
     classSelect.addEventListener('change', function() {
         if (classSelect.value === 'warlock') {
@@ -70,6 +71,14 @@ document.addEventListener("DOMContentLoaded", function() {
             shamanSpecs.style.display = 'block';
         } else {
             shamanSpecs.style.display = 'none';
+        }
+    });
+
+    classSelect.addEventListener('change', function() {
+        if (classSelect.value === 'death-knight') {
+            deathknightSpecs.style.display = 'block';
+        } else {
+            deathknightSpecs.style.display = 'none';
         }
     });
 
