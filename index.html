@@ -9,11 +9,13 @@
     <link href="lightbox.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
     <title>no idea website</title>
 </head>
 
-<body>
+<body class="light-mode">
     <div class="nav-container">
         <nav class="navbar">
             <a href="#"><img src="./images/logo.png" alt="logo" class="logo"></a>
@@ -21,16 +23,21 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
+                <button class="theme-toggle" onclick="toggleTheme()"><i class="material-icons">light_mode</i></button>
             </div>
             <ul class="nav-menu">
-                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="#welcome" class="nav-links">Home</a></li>
                 <li><a href="#about" class="nav-links">About</a></li>
                 <li><a href="#gallery" class="nav-links">Gallery</a></li>
                 <li><a href="#charter" class="nav-links">Charter</a></li>
                 <li><a href="#apply" class="nav-links nav-links-btn">Apply</a></li>
+                <li>
+                    <button class="theme-toggle" onclick="toggleTheme()"><i class="material-icons">light_mode</i></button>
+                </li>
             </ul>
         </nav>
     </div>
+
 
     <div id="welcome">
         <h1>No Idea</h1>
@@ -48,6 +55,7 @@
     <div class="gallery-title">
         <h1>A Gallery of no idea's history</h1>
     </div>
+
     <div id="gallery">
         <!--<h1>Gallery of our history</h1> -->
         <div class="image-gallery">
@@ -108,31 +116,35 @@
             <a href="images/Painsmith.jpg" data-lightbox="bosses" data-title="Mythic Painsmith">
                 <img src="./images/Painsmith.jpg" alt="Painsmith">
             </a>
+            <a href="./images/ras kill.jpg" data-lightbox="bosses" data-title="Mythic Raszageth">
+                <img src=" ./images/ras kill.jpg " alt="Painsmith ">
+            </a>
         </div>
     </div>
     <div id="charter">
         <h1>Guild Charter:</h1>
-        <p><b>1. Atmosphere:</b> our main priority is to have a chill and enjoyable raid environment while we focus on achieving cutting-edge. We will not tolerate any obnoxious behavior. Everyone is encouraged to treat others with the utmost respect while
-            being a part of &lt;no idea&gt;. Feedback is always encouraged towards the leadership and the raid group as a whole as long as there's mutual respect both ways.
+        <p><b>1. Atmosphere:</b> Our primary focus is to cultivate a relaxed and enjoyable raid environment while simultaneously striving for cutting-edge achievements. We have a zero-tolerance policy for any disruptive behavior. It is highly encouraged
+            that all participants treat each other with the utmost respect while being a part of <b>no idea</b>. Constructive feedback towards the leadership and the raid group as a whole is always welcomed, as long as it is expressed with mutual respect.
         </p>
         <br>
-        <p><b>2. Efficiency:</b> Having high attendance during our raid times is at the top of the list. We will try to aim to have a roster of 25 people to cover absences and to bring high-performing raiders to progression fights. If you feel like this
-            guild isn't for you or if you have to stop raiding please give us a 2-week notice if possible so we can look for a replacement to cover your spot.
+        <p><b>2. Efficiency:</b> Maintaining high attendance during our designated raid times is our highest priority. We aim to maintain a roster of 25 individuals to account for any absences and to bring in skilled raiders for progression fights. If you
+            feel that this guild may not be the right fit for you or if you need to discontinue raiding, we kindly request a two-week notice if possible. This will allow us to search for a suitable replacement to cover your position.
             <br>
-            <br> You must be okay with sitting out from time to time. If you are sitting out or asked to sit please be available to come in anytime during our raid times. Since we only raid on a short schedule there isn't a lot of time for errors. We
-            ask our raiders to show up on time for the raid, fully prepared with consumables, addons updated, weak auras downloaded, etc.
+            <br>Please be aware that occasional rotation of raiders may be necessary. If you are asked to sit out, we expect you to be available to join at any time during our raid schedule. Given our limited raiding hours, there is little room for errors.
+            We request that all raiders arrive on time, fully prepared with consumables, updated addons, and downloaded weak auras, among other necessary preparations.
             <br>
-            <br> We also encourage our raiders to play the class and spec that you're most comfortable within a raid environment, especially on progression. Most importantly, always try to improve your logs each week and bring the best of your ability.
+            <br> Furthermore, we strongly encourage our raiders to play the class and specialization in which they feel most comfortable within a raiding environment, particularly during progression. Above all, we expect our raiders to continuously strive
+            for improvement by maximizing their performance logs each week and demonstrating their utmost capabilities.
         </p>
         <br>
-        <p><b>3. Progression:</b> We will not add an optional day for normal or heroic difficulties. We also plan not to save lockouts as soon as we reach the final boss of the raid tier. Our goal is to be efficient as possible on-farm bosses to get our
-            BiS items to help with the last boss. However, there's always a dungeon item or two thats better for a spec. Please find the time before raid and farm the item(s) that you need to help improve your character.
+        <p><b>3. Progression:</b> We have decided not to allocate an additional day for normal or heroic difficulties. Our goal is to maintain maximum efficiency with our two-day schedule. However, we understand that certain dungeon items may significantly
+            benefit specific specializations. Hence, we request that you allocate time before raiding to acquire the item(s) you require to enhance your character.
             <br>
-            <br> We also expect raiders to come prepared knowing the boss encounters and not go in blind as we have 4 days before we raid to do some research. We'll be using RCLootCouncil and vote on gear for whoever its the biggest upgrade for.
+            <br> Additionally, we anticipate our raiders to come well-prepared with knowledge of the boss encounters, ensuring that no one enters the raid unprepared. We will be utilizing RCLootCouncil to vote on gear allocation, prioritizing those who
+            would benefit most from the upgrade.
             <br>
-            <br> During progression we expect raiders to use consumables when necessary like save a potion or a DPS cooldown for a certain part of a fight if required. We want to see healers pumping out DPS numbers as well when healing requirements are
-            low. <br>
-            <b>Boss Mechanics</b> &gt; <b>Adds</b> &gt; <b>DPS/Healing.</b>
+            <br> During progression, we expect our raiders to utilize consumables when necessary, such as saving a potion or DPS cooldown for specific phases of a fight, if required. Moreover, we encourage healers to contribute DPS when healing demands
+            are low. The order of priority during encounters should be <b>Boss Mechanics > Adds > DPS/Healing.</b>
         </p>
         <br>
         <br>
@@ -172,7 +184,7 @@
             <!-- Details -->
             <div class="form-control">
                 <label for="wow armory">
-                    Link your Armory
+                    <b>Link your WoW Armory</b>
                 </label>
 
                 <!-- multi-line text input control -->
@@ -181,34 +193,50 @@
 
             <div class="form-control">
                 <label for="battle.net">
-                    Link your Battle.net
+                    <b>Link your Battle.net</b>
                 </label>
 
                 <!-- multi-line text input control -->
-                <textarea name="battle.net" id="battle.net" placeholder="Please link your Battle.net" required></textarea>
+                <textarea name="battle.net" id="battle.net" placeholder="Please link your Battle.net ID" required></textarea>
             </div>
 
-            <div class="form-control">
-                <label for="discord">
-                    Link your Discord id
+            <div class="form-control ">
+                <label for="discord ">
+                    <b>Link your Discord @</b>
                 </label>
 
                 <!-- multi-line text input control -->
-                <textarea name="discord" id="discord" placeholder="Please link your discord id" required></textarea>
+                <textarea name="discord" id="discord" placeholder="Please link your discord @" required></textarea>
             </div>
 
             <div class="form-control">
-                <label for="class" id="class">
-                    Which Class are you applying as?
+                <label for="role " id="role ">
+                    <b>Which role are you applying as?</b>
                 </label>
 
                 <!-- Dropdown options -->
-                <select name="class" id="class">
+                <select name="role" id="role">
+                    <option value="Please select">Select a role</option>
+                    <option value="dps">DPS</option>
+                    <option value="healer">Healer</option>
+                    <option value="tank">Tank</option>
+                    <option value="other">I can play multiple roles</option>
+                </select>
+            </div>
+
+            <div class="form-control ">
+                <label for="class" id="class">
+                    <b>Which Class are you applying as?</b>
+                </label>
+
+                <!-- Dropdown options -->
+                <select name="class" id="classSelect">
+                    <option value="any">Select a class</option>
                     <option value="warlock">Warlock</option>
                     <option value="mage">Mage</option>
                     <option value="rogue">Rogue</option>
                     <option value="demon-hunter">Demon Hunter</option>
-                    <option value="">Dracthyr</option>
+                    <option value="evoker">Evoker</option>
                     <option value="monk">Monk</option>
                     <option value="hunter">Hunter</option>
                     <option value="shaman">Shaman</option>
@@ -220,23 +248,172 @@
                 </select>
             </div>
 
-            <div class="form-control">
-                <label for="role" id="role">
-                    Which role are you applying as?
-                </label>
+            <!-- Warlock -->
 
-                <!-- Dropdown options -->
-                <select name="role" id="role">
-                    <option value="dps">DPS</option>
-                    <option value="healer">Healer</option>
-                    <option value="tank">Tank</option>
-                    <option value="other">I can play multiple roles</option>
-                </select>
+            <div id="warlockSpecs" style="display: none;">
+                <div class="form-control">
+                    <label for="spec"><b>Warlock Specialization:</b></label>
+                    <label for="demonology">
+                        <input type="radio" id="demonology" name="spec" value="Demonology">Demonology</input>
+                    </label>
+                    <br>
+                    <label for="affliction">
+                        <input type="radio" id="affliction" name="spec" value="Affliction">Affliction</input>
+                    </label>
+                    <br>
+                    <label for="destruction">
+                        <input type="radio" id="destruction" name="spec" value="Destruction">Destruction</input>
+                    </label>
+                    <br>
+                    <label for="warlockSpecializations">
+                        <input type="radio" id="warlockSpecializations" name="spec" value="specializations">Can play all Warlock specializations</input>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Mage -->
+            <div id="mageSpecs" style="display: none;">
+                <div class="form-control">
+                    <label for="spec"><b>Mage Specialization:</b></label>
+                    <label for="Arcane">
+                    <input type="radio" id="arcane" name="spec" value="Arcane">Arcane</input>
+                  </label>
+                    <br>
+                    <label for="frost">
+                    <input type="radio" id="frost" name="spec" value="Frost">Frost</input>
+                  </label>
+                    <br>
+                    <label for="fire">
+                    <input type="radio" id="fire" name="spec" value="Fire">Fire</input>
+                  </label>
+                    <br>
+                    <label for="mageSpecializations">
+                    <input type="radio" id="mageSpecializations" name="spec" value="specializations">Can play all specializations</input>
+                  </label>
+                </div>
+            </div>
+
+            <!-- Rogue -->
+
+            <div id="rogueSpecs" style="display: none;">
+                <div class="form-control">
+                    <label for="spec"><b>Rogue Specialization:</b></label>
+                    <label for="Outlaw">
+                    <input type="radio" id="outlaw" name="spec" value="Outlaw">Outlaw</input>
+                  </label>
+                    <br>
+                    <label for="Subtlety">
+                    <input type="radio" id="subtlety" name="spec" value="Subtlety">Subtlety</input>
+                  </label>
+                    <br>
+                    <label for="Assassination">
+                    <input type="radio" id="assassination" name="spec" value="assassination">Assassination</input>
+                  </label>
+                    <br>
+                    <label for="rogueSpecializations">
+                    <input type="radio" id="rogueSpecializations" name="spec" value="specializations">Can play all specializations</input>
+                  </label>
+                </div>
+            </div>
+
+            <!-- Demon Hunter -->
+
+            <div id="demonhunterSpecs" style="display: none;">
+                <div class="form-control">
+                    <label for="spec"><b>Demon Hunter Specialization:</b></label>
+                    <label for="Havoc">
+                    <input type="radio" id="havoc" name="spec" value="Havoc">Havoc</input>
+                  </label>
+                    <br>
+                    <label for="Vengeance">
+                    <input type="radio" id="vengeance" name="spec" value="Vengeance">Vengeance</input>
+                  </label>
+                    <br>
+                    <label for="demonhunterSpecializations">
+                    <input type="radio" id="demonhunterSpecializations" name="spec" value="specializations">I can play both Havoc and Vengeance</input>
+                  </label>
+                </div>
+            </div>
+
+            <!-- Evoker -->
+
+            <div id="evokerSpecs" style="display: none;">
+                <div class="form-control">
+                    <label for="spec"><b>Evoker Specialization:</b></label>
+                    <label for="Devastation">
+                    <input type="radio" id="devastation" name="spec" value="Devastation">Devastation</input>
+                  </label>
+                    <br>
+                    <label for="Preservation">
+                    <input type="radio" id="preservation" name="spec" value="Preservation">Preservation</input>
+                  </label>
+                    <br>
+                    <label for="Augmentation">
+                    <input type="radio" id="augmentation" name="spec" value="Augmentation">Augmentation</input>
+                  </label>
+                    <br>
+                    <label for="evokerSpecializationsoption">
+                    <input type="radio" id="evokerSpecializationsoption" name="spec" value="specializations">I can play both Devestation and Augmentation.</input>
+                  </label>
+                    <br>
+                    <label for="evokerSpecializations">
+                    <input type="radio" id="evokerSpecializations" name="spec" value="specializations">I can play all Evoker specializations.</input>
+                  </label>
+                </div>
+            </div>
+
+            <!-- Monk -->
+
+            <div id="monkSpecs" style="display: none;">
+                <div class="form-control">
+                    <label for="spec"><b>Monk Specialization:</b></label>
+                    <label for="Windwalker">
+                    <input type="radio" id="windwalker" name="spec" value="Windwalker">Windwalker</input>
+                  </label>
+                    <br>
+                    <label for="Mistweaver">
+                    <input type="radio" id="mistweaver" name="spec" value="Mistwaver">Mistweaver</input>
+                  </label>
+                    <br>
+                    <label for="Brewmaster">
+                    <input type="radio" id="brewmaster" name="spec" value="Brewmaster">Bremaster</input>
+                  </label>
+                    <br>
+                    <label for="monkSpecializationsoption">
+                    <input type="radio" id="monkSpecializations" name="spec" value="monkSpecializationsoption">I can play both Windwalker and Brewmaster.</input>
+                  </label>
+                    <br>
+                    <label for="allMonkSpecializations">
+                    <input type="radio" id="allMonkkSpecializations" name="spec" value="allMonkSpecializations">I can play all monk specializations.</input>
+                  </label>
+                </div>
+            </div>
+
+            <!-- Hunter -->
+            <div id="hunterSpecs" style="display: none;">
+                <div class="form-control">
+                    <label for="spec"><b>Hunter Specialization:</b></label>
+                    <label for="Beastmastery">
+                    <input type="radio" id="beastmastery" name="spec" value="Beastmastery">Outlaw</input>
+                  </label>
+                    <br>
+                    <label for="Subtlety">
+                    <input type="radio" id="subtlety" name="spec" value="Subtlety">Subtlety</input>
+                  </label>
+                    <br>
+                    <label for="Assassination">
+                    <input type="radio" id="assassination" name="spec" value="assassination">Assassination</input>
+                  </label>
+                    <br>
+                    <label for="rogueSpecializations">
+                    <input type="radio" id="rogueSpecializations" name="spec" value="specializations">Can play all specializations</input>
+                  </label>
+                </div>
             </div>
 
             <div class="form-control">
                 <label for="warcraft-logs">
-                    Link your Warcraft Logs
+                    <b>Link your Warcraft Logs</b>
                 </label>
 
                 <!-- multi-line text input control -->
@@ -245,16 +422,16 @@
 
             <div class="form-control">
                 <label for="raiding-experience">
-                    What's your past raiding experience?
+                    <b>What's your past raiding experience?</b>
                 </label>
 
                 <!-- multi-line text input control -->
-                <textarea name="raiding-experience" id="raiding-experience" placeholder="What's your past raiding experience?" required></textarea>
+                <textarea name="raiding-experience " id="raiding-experience " placeholder="What 's your past raiding experience?" required></textarea>
             </div>
 
             <div class="form-control">
                 <label for="why-join">
-                    Why do you want to raid in no idea?
+                    <b>Why do you want to raid in no idea?</b>
                 </label>
 
                 <!-- multi-line text input control -->
@@ -263,7 +440,7 @@
 
             <div class="form-control">
                 <label>
-                    Can you handle criticism and feedback?
+                    <b>Can you handle criticism and feedback?</b>
                 </label>
 
                 <!-- Input Type Radio Button -->
@@ -277,8 +454,8 @@
 
             <div class="form-control">
                 <label for="Additonal Info">
-                    Anything that you would like to share? Such as
-                    any notable achievements in WoW or other games?
+                    <b>Anything that you would like to share? Such as
+                    any notable achievements in WoW or other games?</b>
                 </label>
 
                 <!-- multi-line text input control -->
@@ -287,7 +464,7 @@
 
             <div class="form-control">
                 <label>
-                    Have you read through our <a href="#charter"> guild charter</a>?
+                    <b>Have you read through our <a href="#charter"> guild charter</a>?</b>
                 </label>
 
                 <!-- Input Type Radio Button -->
@@ -306,8 +483,10 @@
     </div>
     <!--<a href="#welcome" class="top">Back to top</a> -->
     <footer>
-        <p>Copyright&copy; 2022 Guild Master of no idea</p>
+        <p>Copyright&copy; 2023 Guild Master of no idea</p>
     </footer>
+
+    <script src="form.js"></script>
     <script src="index.js"></script>
     <script src="lightbox-plus-jquery.js"></script>
 </body>
