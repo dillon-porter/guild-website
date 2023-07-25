@@ -1,50 +1,67 @@
+const express = require('express');
+const app = express();
 const nodemailer = require('nodemailer');
+require('dotenv').config(); // Load environment variables from .env file
 
-exports.handler = async function(event, context) {
-    try {
-        const transporter = nodemailer.createTransport({
-            service: 'hotmail',
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASSWORD,
-            },
-        });
+// Middleware to parse incoming form data
+app.use(express.urlencoded({ extended: true }));
 
-        const { wow_armory, battle_net, discord, role, class: playerClass, spec, warcraft_logs, raiding_experience, why_join, handle_criticism, Additonal_Info, read_guild_charter_yes } = JSON.parse(
-            event.body
-        );
+// Serve the static HTML form file
+app.use(express.static('public'));
 
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // Replace this with your email address to receive form submissions
-            subject: 'New Raider Application',
-            html: `
-        <h1>New Raider Application</h1>
-        <p><b>WoW Armory Link:</b> ${wow_armory}</p>
-        <p><b>Battle.net Link:</b> ${battle_net}</p>
-        <p><b>Discord @:</b> ${discord}</p>
-        <p><b>Role:</b> ${role}</p>
-        <p><b>Class:</b> ${playerClass}</p>
-        <p><b>Specialization:</b> ${spec}</p>
-        <p><b>Warcraft Logs:</b> ${warcraft_logs}</p>
-        <p><b>Raiding Experience:</b> ${raiding_experience}</p>
-        <p><b>Reason for Joining:</b> ${why_join}</p>
-        <p><b>Can Handle Criticism and Feedback:</b> ${handle_criticism}</p>
-        <p><b>Additional Info:</b> ${Additonal_Info}</p>
-        <p><b>Read Guild Charter:</b> ${read_guild_charter_yes}</p>
-      `,
-        };
+// POST route to handle the form submission
+app.post('/submit-form', (req, res) => {
+    // Get the form data from the request body
+    const formData = req.body;
 
-        const info = await transporter.sendMail(mailOptions);
+    // Create a Nodemailer transporter
+    const transporter = nodemailer.createTransport({
+        service: 'hotmail', // Update with your email service (e.g., gmail, outlook)
+        auth: {
+            user: process.env.EMAIL_USERNAME,
+            pass: process.env.EMAIL_PASSWORD,
+        },
+    });
 
-        return {
-            statusCode: 200,
-            body: JSON.stringify(info),
-        };
-    } catch (error) {
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Failed to send email' }),
-        };
-    }
-};
+    // Email content
+    const emailContent = `
+    New Form Submission:
+    Wow Armory Link: ${formData.wow_armory}
+    Battle.net Link: ${formData['battle.net']}
+    Discord: ${formData.discord}
+    Role: ${formData.role}
+    Class: ${formData.class}
+    Specialization: ${formData.spec}
+    Warcraft Logs Link: ${formData['warcraft-logs']}
+    Raiding Experience: ${formData['raiding-experience']}
+    Reason for Joining: ${formData['why-join']}
+    Can Handle Criticism and Feedback: ${formData['handle-criticism']}
+    Additional Info: ${formData['Additonal Info']}
+    Read Guild Charter: ${formData['read-guild-charter-yes']}
+  `;
+
+    // Email options
+    const mailOptions = {
+        from: 'dillonporter@hotmail.com', // Your Hotmail email address
+        to: 'dillonporter@hotmail.com', // Your Hotmail email address
+        subject: 'New Form Submission',
+        text: emailContent,
+    };
+
+    // Send the email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error sending email:', error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log('Email sent:', info.response);
+            res.status(200).send('Form submission successful');
+        }
+    });
+});
+
+// Start the server
+const port = 3000; // You can change the port if needed
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
