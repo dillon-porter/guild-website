@@ -3,6 +3,7 @@ const app = express();
 const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables from .env file
 
+
 // Middleware to parse incoming form data
 app.use(express.urlencoded({ extended: true }));
 
@@ -38,24 +39,23 @@ app.post('/submit-form', (req, res) => {
 
     // Email options
     const mailOptions = {
-        from: 'dillonporter@hotmail.com', // Your Hotmail email address
-        to: 'dillonporter@hotmail.com', // Your Hotmail email address
-        subject: 'New Form Submission',
-        text: emailContent,
+        from: process.env.EMAIL_USER, // Use the environment variable for sender email
+        to: process.env.EMAIL_USER, // Use the environment variable for recipient email
+        subject: 'New Subscription',
+        text: emailContent
     };
 
     // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error('Error sending email:', error);
+            console.error(error);
             res.status(500).send('Error sending email');
         } else {
             console.log('Email sent:', info.response);
-            res.status(200).send('Form submission successful');
+            res.status(200).send('Email sent successfully');
         }
     });
 });
-
 // Start the server
 const port = 3000; // You can change the port if needed
 app.listen(port, () => {
