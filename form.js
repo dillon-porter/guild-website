@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const hunterSpecs = document.getElementById('hunterSpecs');
     const shamanSpecs = document.getElementById('shamanSpecs');
     const deathknightSpecs = document.getElementById('deathknightSpecs');
+    const paladinSpecs = document.getElementById('paladinSpecs');
+    const priestSpecs = document.getElementById('priestSpecs');
+    const druidSpecs = document.getElementById('druidSpecs');
+    const warriorSpecs = document.getElementById('warriorSpecs');
 
     classSelect.addEventListener('change', function() {
         if (classSelect.value === 'warlock') {
@@ -79,6 +83,38 @@ document.addEventListener("DOMContentLoaded", function() {
             deathknightSpecs.style.display = 'block';
         } else {
             deathknightSpecs.style.display = 'none';
+        }
+    });
+
+    classSelect.addEventListener('change', function() {
+        if (classSelect.value === 'paladin') {
+            paladinSpecs.style.display = 'block';
+        } else {
+            paladinSpecs.style.display = 'none';
+        }
+    });
+
+    classSelect.addEventListener('change', function() {
+        if (classSelect.value === 'priest') {
+            priestSpecs.style.display = 'block';
+        } else {
+            priestSpecs.style.display = 'none';
+        }
+    });
+
+    classSelect.addEventListener('change', function() {
+        if (classSelect.value === 'druid') {
+            druidSpecs.style.display = 'block';
+        } else {
+            druidSpecs.style.display = 'none';
+        }
+    });
+
+    classSelect.addEventListener('change', function() {
+        if (classSelect.value === 'warrior') {
+            warriorSpecs.style.display = 'block';
+        } else {
+            warriorSpecs.style.display = 'none';
         }
     });
 

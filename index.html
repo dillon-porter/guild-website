@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no idea website</title>
     <link href="index.css" rel="stylesheet">
     <link href="lightbox.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,55 +13,56 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
-    <title>no idea website</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="light-mode">
     <div class="nav-container">
-        <nav class="navbar">
-            <a href="#"><img src="./images/logo.png" alt="logo" class="logo"></a>
-            <div class="menu-toggle" id="mobile-menu">
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="#"><img src="./images/logo.png" alt="no idea's guild logo" class="logo"></a>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-                <button class="theme-toggle" onclick="toggleTheme()"><i class="material-icons">light_mode</i></button>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme"><i class="material-icons">light_mode</i></button>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" role="navigation" aria-label="Main Menu">
                 <li><a href="#welcome" class="nav-links">Home</a></li>
                 <li><a href="#about" class="nav-links">About</a></li>
                 <li><a href="#gallery" class="nav-links">Gallery</a></li>
                 <li><a href="#charter" class="nav-links">Charter</a></li>
                 <li><a href="#apply" class="nav-links nav-links-btn">Apply</a></li>
                 <li>
-                    <button class="theme-toggle" onclick="toggleTheme()"><i class="material-icons">light_mode</i></button>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme"><i class="material-icons">light_mode</i></button>
                 </li>
             </ul>
+
         </nav>
     </div>
 
 
-    <div id="welcome">
+    <div id="welcome" tabindex="0">
         <h1>No Idea</h1>
         <h2>World of Warcraft Mythic Raiding Guild</h2>
         <p> We raid two days on the weekend from 11:00 AM - 3:00 PM Eastern Time on Illidan-US</p>
-        <img src="./images/logo.png" alt="Logo" class="welcome-img" />
+        <img src="./images/logo.png" alt="no idea's logo" class="welcome-img" />
     </div>
 
-    <div id="about">
+    <div id="about" tabindex="0">
         <h1>About</h1>
         <p><b>no idea</b> is a Mythic Cutting-Edge-oriented guild that raids two times a week during Saturday & Sunday mornings to afternoon from 11 AM - 3 PM EST. Established in 2014 around the middle of Siege of Orgrimmar tier. Previously, we've remained
             the top 2-day guild and weekend guild on Illidan-US up to the Uldir tier in BFA. Since then, we've been raiding on and off however, achieving most Cutting Edge achievements during each raid tier remains a major focus to this day, with the
             additional goal of increasing our competitiveness against the top weekend and two-day guilds.</p>
     </div>
-    <div class="gallery-title">
+
+    <div class="gallery-title" tabindex="0">
         <h1>A Gallery of no idea's history</h1>
     </div>
 
-    <div id="gallery">
-        <!--<h1>Gallery of our history</h1> -->
+    <div id="gallery" tabindex="0">
         <div class="image-gallery">
             <a href="images/Xavius.jpg" data-lightbox="bosses" data-title="Mythic Xavius">
-                <img src="./images/Xavius.jpg" alt="Guldan">
+                <img src="./images/Xavius.jpg" alt="Xavius">
             </a>
 
             <a href="images/Helya.jpg" data-lightbox="bosses" data-title="Mythic Helya">
@@ -100,7 +102,7 @@
             </a>
 
             <a href="images/Cenarius.jpg" data-lightbox="bosses" data-title="Mythic Cenarius">
-                <img src="./images/Cenarius.jpg" alt="Denathrius">
+                <img src="./images/Cenarius.jpg" alt="Cenarius">
             </a>
 
             <a href="images/Guarm.jpg" data-lightbox="bosses" data-title="Mythic Guarm">
@@ -111,17 +113,18 @@
                 <img src="./images/KinnyG.jpg" alt="KinnyG">
             </a>
             <a href="images/Sisters.jpg" data-lightbox="bosses" data-title="Mythic Sisters of the moon">
-                <img src="./images/Sisters.jpg" alt="Denathrius">
+                <img src="./images/Sisters.jpg" alt="Mythic Sisters">
             </a>
             <a href="images/Painsmith.jpg" data-lightbox="bosses" data-title="Mythic Painsmith">
                 <img src="./images/Painsmith.jpg" alt="Painsmith">
             </a>
             <a href="./images/ras kill.jpg" data-lightbox="bosses" data-title="Mythic Raszageth">
-                <img src=" ./images/ras kill.jpg " alt="Painsmith ">
+                <img src=" ./images/ras kill.jpg " alt="Mythic Razageth">
             </a>
         </div>
     </div>
-    <div id="charter">
+
+    <div id="charter" tabindex="0">
         <h1>Guild Charter:</h1>
         <p><b>1. Atmosphere:</b> Our primary focus is to cultivate a relaxed and enjoyable raid environment while simultaneously striving for cutting-edge achievements. We have a zero-tolerance policy for any disruptive behavior. It is highly encouraged
             that all participants treat each other with the utmost respect while being a part of <b>no idea</b>. Constructive feedback towards the leadership and the raid group as a whole is always welcomed, as long as it is expressed with mutual respect.
@@ -152,144 +155,140 @@
         <br>
         <br>
         <ul>
-            <li><u>Check discord daily:</u> This is how we discuss boss strategies and information to our raiders. We expect you to not only read the post but to contribute as often as you can.
+            <li><b>Check discord daily:</b> This is how we discuss boss strategies and information to our raiders. We expect you to not only read the post but to contribute as often as you can.
             </li>
             <br>
             <li>
-                <u>Post on the #late or absent discord channel:</u> if you have to miss raid: Telling an officer isn’t always adequate.
+                <b>Post on the #late or absent discord channel:</b> if you have to miss raid: Telling an officer isn’t always adequate.
             </li>
             <br>
             <li>
-                <u>Minimize random AFK’s while we raid:</u> We give a 10minute break halfway throughout the raid day, try your best to save water/bathroom breaks until then. If you do have to AFK please let someone know.
+                <b>Minimize random AFK’s while we raid:</b> We give a 10minute break halfway throughout the raid day, try your best to save water/bathroom breaks until then. If you do have to AFK please let someone know.
             </li>
             <br>
             <li>
-                <u>Research:</u> Raiders are expected to know the fights along with how to optimize your character. Look at Warcraft logs, Class Discords, and WoWhead.
+                <b>Research:</b> Raiders are expected to know the fights along with how to optimize your character. Look at Warcraft logs, Class Discords, and WoWhead.
             </li>
             <br>
-            <li><u>All BoE's</u> that drop in the raid must be traded to the GM or to the guild bank. We will be using Loot council to distribute BoE's that drop to help gear raiders. If a BoE's isn't an upgrade, it will be sold, this helps supply the guild
+            <li><b>All BoE's</b> that drop in the raid must be traded to the GM or to the guild bank. We will be using Loot council to distribute BoE's that drop to help gear raiders. If a BoE's isn't an upgrade, it will be sold, this helps supply the guild
                 with gold for guild repairs, flask, feast, etc.
             </li>
             <br>
-            <li><u>Trials:</u> The trial period is about 3-4 weekends, or 6-8 raiding days. What we look for is avoidable damage, mechanics, attitude, and attendance.
+            <li><b>Trials:</b> The trial period is about 3-4 weekends, or 6-8 raiding days. What we look for is avoidable damage, mechanics, attitude, and attendance.
             </li>
         </ul>
         </p>
     </div>
+
+    <!-- Recruitment Form -->
     <div id="apply">
         <form action="https://getform.io/f/dc4c07d1-52d1-418a-ac70-7d530ed57c6c" method="POST" id="form">
             <h1>Raider Application</h1>
             <br>
 
-            <!-- Details -->
+            <!-- Link your WoW Armory -->
             <div class="form-control">
-                <label for="wow armory">
-                    <b>Link your WoW Armory</b>
-                </label>
-
-                <!-- multi-line text input control -->
-                <textarea name="wow armory" id="wow_armory" placeholder="Please link your WoW Armory" required></textarea>
+                <label for="wow_armory"><b>Link your WoW Armory</b></label>
+                <textarea name="wow_armory" id="wow_armory" placeholder="Please link your WoW Armory" required></textarea>
             </div>
 
+            <!-- Link your Battle.net -->
             <div class="form-control">
-                <label for="battle.net">
-                    <b>Link your Battle.net</b>
-                </label>
-
-                <!-- multi-line text input control -->
+                <label for="battle.net"><b>Link your Battle.net</b></label>
                 <textarea name="battle.net" id="battle.net" placeholder="Please link your Battle.net ID" required></textarea>
             </div>
 
-            <div class="form-control ">
-                <label for="discord ">
-                    <b>Link your Discord @</b>
-                </label>
-
-                <!-- multi-line text input control -->
+            <!-- Link your Discord -->
+            <div class="form-control">
+                <label for="discord"><b>Link your Discord @</b></label>
                 <textarea name="discord" id="discord" placeholder="Please link your discord @" required></textarea>
             </div>
 
+            <!-- Role selection -->
             <div class="form-control">
-                <label for="role " id="role ">
-                    <b>Which role are you applying as?</b>
-                </label>
-
-                <!-- Dropdown options -->
-                <select name="role" id="role">
-                    <option value="Please select">Select a role</option>
-                    <option value="dps">DPS</option>
-                    <option value="healer">Healer</option>
-                    <option value="tank">Tank</option>
-                    <option value="other">I can play multiple roles</option>
-                </select>
+                <label for="role"><b>Which role are you applying as?</b></label>
+                <select name="role" id="role" required>
+            <option value="Please select">Select a role</option>
+            <option value="dps">DPS</option>
+            <option value="healer">Healer</option>
+            <option value="tank">Tank</option>
+            <option value="other">I can play multiple roles</option>
+        </select>
             </div>
 
-            <div class="form-control ">
-                <label for="class" id="class">
-                    <b>Which Class are you applying as?</b>
-                </label>
-
-                <!-- Dropdown options -->
-                <select name="class" id="classSelect">
-                    <option value="any">Select a class</option>
-                    <option value="warlock">Warlock</option>
-                    <option value="mage">Mage</option>
-                    <option value="rogue">Rogue</option>
-                    <option value="demon-hunter">Demon Hunter</option>
-                    <option value="evoker">Evoker</option>
-                    <option value="monk">Monk</option>
-                    <option value="hunter">Hunter</option>
-                    <option value="shaman">Shaman</option>
-                    <option value="death-knight">Death Knight</option>
-                    <option value="paladin">Paladin</option>
-                    <option value="priest">Priest</option>
-                    <option value="druid">Druid</option>
-                    <option value="warrior">Warrior</option>
-                </select>
+            <!-- Class selection -->
+            <div class="form-control">
+                <label for="classSelect"><b>Which Class are you applying as?</b></label>
+                <select name="class" id="classSelect" required>
+                <option value="any">Select a class</option>
+                <option value="warlock">Warlock</option>
+                <option value="mage">Mage</option>
+                <option value="rogue">Rogue</option>
+                <option value="demon-hunter">Demon Hunter</option>
+                <option value="evoker">Evoker</option>
+                <option value="monk">Monk</option>
+                <option value="hunter">Hunter</option>
+                <option value="shaman">Shaman</option>
+                <option value="death-knight">Death Knight</option>
+                <option value="paladin">Paladin</option>
+                <option value="priest">Priest</option>
+                <option value="druid">Druid</option>
+                <option value="warrior">Warrior</option>   
+            </select>
             </div>
+
 
             <!-- Warlock -->
 
             <div id="warlockSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Warlock Specialization:</b></label>
+                    <h1 class="spec" aria-label="Select a hunter specialization">Warlock Specializations</h1>
+                    <!-- Correctly associated label and input -->
                     <label for="demonology">
-                        <input type="radio" id="demonology" name="spec" value="Demonology">Demonology</input>
-                    </label>
+                <input type="radio" id="demonology" name="spec" value="Demonology" aria-label="Demonology"></input>
+                Demonology
+              </label>
                     <br>
+                    <!-- Correctly associated label and input -->
                     <label for="affliction">
-                        <input type="radio" id="affliction" name="spec" value="Affliction">Affliction</input>
-                    </label>
+                <input type="radio" id="affliction" name="spec" value="Affliction" aria-label="Affliction"></input>
+                Affliction
+              </label>
                     <br>
+                    <!-- Correctly associated label and input -->
                     <label for="destruction">
-                        <input type="radio" id="destruction" name="spec" value="Destruction">Destruction</input>
-                    </label>
+                <input type="radio" id="destruction" name="spec" value="Destruction" aria-label="Destruction"></input>
+                Destruction
+              </label>
                     <br>
+                    <!-- Correctly associated label and input -->
                     <label for="warlockSpecializations">
-                        <input type="radio" id="warlockSpecializations" name="spec" value="specializations">Can play all Warlock specializations</input>
-                    </label>
+                <input type="radio" id="warlockSpecializations" name="spec" value="warlockSpecializations" aria-label="I can play all Warlock specializations"></input>
+                I can play all Warlock specializations
+              </label>
                 </div>
             </div>
 
             <!-- Mage -->
+
             <div id="mageSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Mage Specialization:</b></label>
-                    <label for="Arcane">
-                    <input type="radio" id="arcane" name="spec" value="Arcane">Arcane</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a Mage specialization">Mage Specializations</h1>
+                    <label for="arcane">
+                <input type="radio" id="arcane" name="spec" value="Arcane" aria-label="Arcane">Arcane</input>
+              </label>
                     <br>
-                    <label for="frost">
-                    <input type="radio" id="frost" name="spec" value="Frost">Frost</input>
-                  </label>
+                    <label for="frostMage">
+                <input type="radio" id="frostMage" name="spec" value="Frost" aria-label="Frost">Frost</input>
+              </label>
                     <br>
                     <label for="fire">
-                    <input type="radio" id="fire" name="spec" value="Fire">Fire</input>
-                  </label>
+                <input type="radio" id="fire" name="spec" value="Fire" aria-label="Fire">Fire</input>
+              </label>
                     <br>
                     <label for="mageSpecializations">
-                    <input type="radio" id="mageSpecializations" name="spec" value="specializations">Can play all specializations</input>
-                  </label>
+                <input type="radio" id="mageSpecializations" name="spec" value="specializations" aria-label="I can play all mage specializations">I can play all mage specializations</input>
+              </label>
                 </div>
             </div>
 
@@ -297,22 +296,22 @@
 
             <div id="rogueSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Rogue Specialization:</b></label>
-                    <label for="Outlaw">
-                    <input type="radio" id="outlaw" name="spec" value="Outlaw">Outlaw</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a Rogue specialization">Rogue Specializations</h1>
+                    <label for="outlaw">
+                <input type="radio" id="outlaw" name="spec" value="Outlaw" aria-label="Outlaw">Outlaw</input>
+              </label>
                     <br>
-                    <label for="Subtlety">
-                    <input type="radio" id="subtlety" name="spec" value="Subtlety">Subtlety</input>
-                  </label>
+                    <label for="subtlety">
+                <input type="radio" id="subtlety" name="spec" value="Subtlety" aria-label="Subtlety">Subtlety</input>
+              </label>
                     <br>
-                    <label for="Assassination">
-                    <input type="radio" id="assassination" name="spec" value="assassination">Assassination</input>
-                  </label>
+                    <label for="assassination">
+                <input type="radio" id="assassination" name="spec" value="assassination" aria-label="Assassination">Assassination</input>
+              </label>
                     <br>
                     <label for="rogueSpecializations">
-                    <input type="radio" id="rogueSpecializations" name="spec" value="specializations">Can play all specializations</input>
-                  </label>
+                <input type="radio" id="rogueSpecializations" name="spec" value="specializations" aria-label="I can play all specializations">I can play all specializations</input>
+              </label>
                 </div>
             </div>
 
@@ -320,18 +319,18 @@
 
             <div id="demonhunterSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Demon Hunter Specialization:</b></label>
-                    <label for="Havoc">
-                    <input type="radio" id="havoc" name="spec" value="Havoc">Havoc</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a Demon Hunter specialization">Demon Hunter Specializations</h1>
+                    <label for="havoc">
+                <input type="radio" id="havoc" name="spec" value="Havoc" aria-label="Havoc">Havoc</input>
+              </label>
                     <br>
-                    <label for="Vengeance">
-                    <input type="radio" id="vengeance" name="spec" value="Vengeance">Vengeance</input>
-                  </label>
+                    <label for="vengeance">
+                <input type="radio" id="vengeance" name="spec" value="Vengeance" aria-label="Vengeance">Vengeance</input>
+              </label>
                     <br>
                     <label for="demonhunterSpecializations">
-                    <input type="radio" id="demonhunterSpecializations" name="spec" value="specializations">I can play both Havoc and Vengeance</input>
-                  </label>
+                <input type="radio" id="demonhunterSpecializations" name="spec" value="specializations" aria-label="I can play both Havoc and Vengeance">I can play both Havoc and Vengeance</input>
+              </label>
                 </div>
             </div>
 
@@ -339,26 +338,26 @@
 
             <div id="evokerSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Evoker Specialization:</b></label>
-                    <label for="Devastation">
-                    <input type="radio" id="devastation" name="spec" value="Devastation">Devastation</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a Evoker specialization">Evoker Specializations</h1>
+                    <label for="devastation">
+                <input type="radio" id="devastation" name="spec" value="Devastation" aria-label="Devastation">Devastation</input>
+              </label>
                     <br>
-                    <label for="Preservation">
-                    <input type="radio" id="preservation" name="spec" value="Preservation">Preservation</input>
-                  </label>
+                    <label for="preservation">
+                <input type="radio" id="preservation" name="spec" value="Preservation" aria-label="Preservation">Preservation</input>
+              </label>
                     <br>
-                    <label for="Augmentation">
-                    <input type="radio" id="augmentation" name="spec" value="Augmentation">Augmentation</input>
-                  </label>
+                    <label for="augmentation">
+                <input type="radio" id="augmentation" name="spec" value="Augmentation" aria-label="Augmentation">Augmentation</input>
+              </label>
                     <br>
                     <label for="evokerSpecializationsoption">
-                    <input type="radio" id="evokerSpecializationsoption" name="spec" value="specializations">I can play both Devestation and Augmentation.</input>
-                  </label>
+                <input type="radio" id="evokerSpecializationsoption" name="spec" value="specializations" aria-label="I can play both Devestation and Augmentation">I can play both Devestation and Augmentation</input>
+              </label>
                     <br>
                     <label for="evokerSpecializations">
-                    <input type="radio" id="evokerSpecializations" name="spec" value="specializations">I can play all Evoker specializations.</input>
-                  </label>
+                <input type="radio" id="evokerSpecializations" name="spec" value="specializations" aria-label="I can play all Evoker specializations">I can play all Evoker specializations</input>
+              </label>
                 </div>
             </div>
 
@@ -366,70 +365,80 @@
 
             <div id="monkSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Monk Specialization:</b></label>
-                    <label for="Windwalker">
-                    <input type="radio" id="windwalker" name="spec" value="Windwalker">Windwalker</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a monk specialization">Monk Specializations</h1>
+                    <label for="windwalker">
+                <input type="radio" id="windwalker" name="spec" value="Windwalker" aria-label="Windwalker">Windwalker</input>
+              </label>
                     <br>
-                    <label for="Mistweaver">
-                    <input type="radio" id="mistweaver" name="spec" value="Mistwaver">Mistweaver</input>
-                  </label>
+                    <label for="mistweaver">
+                <input type="radio" id="mistweaver" name="spec" value="Mistwaver" aria-label="Mistweaver">Mistweaver</input>
+              </label>
                     <br>
-                    <label for="Brewmaster">
-                    <input type="radio" id="brewmaster" name="spec" value="Brewmaster">Bremaster</input>
-                  </label>
+                    <label for="brewmaster">
+                <input type="radio" id="brewmaster" name="spec" value="Brewmaster" aria-label="Bremaster">Bremaster</input>
+              </label>
                     <br>
-                    <label for="monkSpecializationsoption">
-                    <input type="radio" id="monkSpecializations" name="spec" value="monkSpecializationsoption">I can play both Windwalker and Brewmaster.</input>
-                  </label>
+                    <label for="monkSpecializations">
+                <input type="radio" id="monkSpecializations" name="spec" value="monkSpecializations" aria-label="I can play both Windwalker and Brewmaster">I can play both Windwalker and Brewmaster</input>
+              </label>
                     <br>
                     <label for="allMonkSpecializations">
-                    <input type="radio" id="allMonkkSpecializations" name="spec" value="allMonkSpecializations">I can play all monk specializations.</input>
-                  </label>
+                <input type="radio" id="allMonkSpecializations" name="spec" value="allMonkSpecializations" aria-label="I can play all monk specializations">I can play all monk specializations</input>
+              </label>
                 </div>
             </div>
 
             <!-- Hunter -->
+
             <div id="hunterSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Hunter Specialization:</b></label>
-                    <label for="Beastmastery">
-                    <input type="radio" id="beastmastery" name="spec" value="Beastmastery">Beastmastery</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a hunter specialization">Hunter Specializations</h1>
+                    <!-- Correctly associated label and input -->
+                    <label for="beastmastery">
+                <input type="radio" id="beastmastery" name="spec" value="Beastmastery" aria-label="Beastmastery">
+                Beastmastery
+              </label></input>
                     <br>
-                    <label for="Marksmanship">
-                    <input type="radio" id="marksmanship" name="spec" value="Marksmanship">Marksmanship</input>
-                  </label>
+                    <!-- Correctly associated label and input -->
+                    <label for="marksmanship">
+                <input type="radio" id="marksmanship" name="spec" value="Marksmanship" aria-label="Marksmanship">
+                Marksmanship
+              </label></input>
                     <br>
-                    <label for="Survival">
-                    <input type="radio" id="survival" name="spec" value="Survival">Survival</input>
-                  </label>
+                    <!-- Correctly associated label and input -->
+                    <label for="survival">
+                <input type="radio" id="survival" name="spec" value="Survival" aria-label="Survival">
+                Survival
+              </label></input>
                     <br>
+                    <!-- Correctly associated label and input -->
                     <label for="hunterSpecializations">
-                    <input type="radio" id="hunterSpecializations" name="spec" value="specializations">Can play all hunter specializations</input>
-                  </label>
+                <input type="radio" id="hunterSpecializations" name="spec" value="specializations">
+                I can play all hunter specializations
+              </label></input>
                 </div>
             </div>
 
             <!-- Shaman -->
+
             <div id="shamanSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Shaman Specialization:</b></label>
-                    <label for="Elemental">
-                    <input type="radio" id="elemental" name="spec" value="elemental">Elemental</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a Shaman specialization">Shaman Specializations</h1>
+                    <label for="elemental">
+                <input type="radio" id="elemental" name="spec" value="elemental" aria-label="Elemental">Elemental</input>
+              </label>
                     <br>
-                    <label for="Enhancement">
-                    <input type="radio" id="enhancement" name="spec" value="Enhancement">Enhancement</input>
-                  </label>
+                    <label for="enhancement">
+                <input type="radio" id="enhancement" name="spec" value="Enhancement" aria-label="Enhancement">Enhancement</input>
+              </label>
                     <br>
-                    <label for="Restoration">
-                    <input type="radio" id="restoration" name="spec" value="Restoration">Restoration</input>
-                  </label>
+                    <label for="restoration">
+                <input type="radio" id="restoration" name="spec" value="Restoration" aria-label="Restoration">Restoration</input>
+              </label>
                     <br>
                     <label for="shamanSpecializations">
-                    <input type="radio" id="rogueSpecializations" name="spec" value="specializations"> I Can play all shaman specializations</input>
-                  </label>
+                <input type="radio" id="shamanSpecializations" name="spec" value="specializations" aria-label="I can play all shaman specializations"> I can play all shaman specializations</input>
+              </label>
                 </div>
             </div>
 
@@ -437,97 +446,218 @@
 
             <div id="deathknightSpecs" style="display: none;">
                 <div class="form-control">
-                    <label for="spec"><b>Death Knight Specialization:</b></label>
-                    <label for="Unholy">
-                    <input type="radio" id="Unholy" name="spec" value="Unholy">Unholy</input>
-                  </label>
+                    <h1 class="spec" aria-label="Select a Death Knight specialization">Death Knight Specializations</h1>
+                    <label for="unholy">
+                <input type="radio" id="unholy" name="spec" value="Unholy" aria-label="Unholy">Unholy</input>
+              </label>
                     <br>
-                    <label for="Frost">
-                    <input type="radio" id="Frost" name="spec" value="Frost">Frost</input>
-                  </label>
+                    <label for="frost">
+                <input type="radio" id="frost" name="spec" value="Frost" aria-label="Frost">Frost</input>
+              </label>
                     <br>
-                    <label for="Blood">
-                    <input type="radio" id="Blood" name="spec" value="Blood">Blood</input>
-                  </label>
+                    <label for="blood">
+                <input type="radio" id="blood" name="spec" value="Blood" aria-label="Blood">Blood</input>
+              </label>
                     <br>
                     <label for="deathknightSpecializations">
-                    <input type="radio" id="deathknightSpecializations" name="spec" value="deathknightSpecializations"> I Can play all death knight specializations</input>
-                  </label>
+                <input type="radio" id="deathknightSpecializations" name="spec" value="deathknightSpecializations" aria-label="I can play all death knight specializations"> I can play all death knight specializations</input>
+              </label>
                 </div>
             </div>
 
+            <!-- Paladin -->
 
+            <div id="paladinSpecs" style="display: none;">
+                <div class="form-control">
+                    <h1 class="spec" aria-label="Select a Paladin specialization">Paladin Specializations</h1>
+                    <label for="retribution">
+                <input type="radio" id="retribution" name="spec" value="Retribution" aria-label="Retribution">Retribution</input>
+              </label>
+                    <br>
+                    <label for="holyPaladin">
+                <input type="radio" id="holyPaladin" name="spec" value="Holy Paladin" aria-label="Holy Paladin">Holy Paladin</input>
+              </label>
+                    <br>
+                    <label for="protectionPaladin">
+                <input type="radio" id="protectionPaladin" name="spec" value="ProtectionPaladin" aria-label="Protection Paladin">Protection Paladin</input>
+              </label>
+                    <br>
+                    <label for="multiPaladinSpecializations">
+                <input type="radio" id="multiPaladinSpecializations" name="spec" value="multiPaladinSpecializations" aria-label="I can play both Protection and Retribution specializations">I can play both Protection and Retribution specializations</input>
+              </label>
+                    <br>
+                    <label for="paladinSpecializations">
+                <input type="radio" id="paladinSpecializations" name="spec" value="paladinSpecializations" aria-label="I can play all paladin specializations">I can play all paladin specializations</input>
+              </label>
+                </div>
+            </div>
+
+            <!-- Priest -->
+
+            <div id="priestSpecs" style="display: none;">
+                <div class="form-control">
+                    <h1 class="spec" aria-label="Select a Priest specialization">Priest Specializations</h1>
+                    <label for="discipline">
+                <input type="radio" id="discipline" name="spec" value="discipline" aria-label="Discipline">Discipline</input>
+              </label>
+                    <br>
+                    <label for="holyPriest">
+                <input type="radio" id="holyPriest" name="spec" value="HolyPriest" aria-label="Holy Priest">Holy Priest</input>
+              </label>
+                    <br>
+                    <label for="shadow">
+                <input type="radio" id="shadow" name="spec" value="Shadow" aria-label="Shadow">Shadow</input>
+              </label>
+                    <br>
+                    <label for="discAndShadowPriestSpecializations">
+                <input type="radio" id="discAndShadowPriestSpecializations" name="spec" value="discAndShadowPriestSpecializations" aria-label="I can play both Discipline and Shadow specializations">I can play both Discipline and Shadow specializations</input>
+              </label>
+                    <br>
+                    <label for="healandDpsPriestSpecializations">
+                <input type="radio" id="healandDpsPriestSpecializations" name="spec" value="healandDpsPriestSpecializations" aria-label="I can play both Discipline and Holy specializations">I can play both Discipline and Holy specializations</input>
+              </label>
+                    <br>
+                    <label for="multiPriestSpecializations">
+                <input type="radio" id="multiPriestSpecializations" name="spec" value="multiPriestSpecializations" aria-label="I can play both Holy and Shadow specializations">I can play both Holy and Shadow specializations</input>
+              </label>
+                    <br>
+                    <label for="priestSpecializations">
+                <input type="radio" id="priestSpecializations" name="spec" value="priestSpecializations" aria-label="I can play all priest specializations">I can play all priest specializations</input>
+              </label>
+                </div>
+            </div>
+
+            <!-- Druid -->
+
+            <div id="druidSpecs" style="display: none;">
+                <div class="form-control">
+                    <h1 class="spec" aria-label="Select a Druid specialization">Druid Specializations</h1>
+                    <label for="restorationDruid">
+                <input type="radio" id="restorationDruid" name="spec" value="RestorationDruid" aria-label="Restoration">Restoration</input>
+              </label>
+                    <br>
+                    <label for="balance">
+                <input type="radio" id="balance" name="spec" value="Balance" aria-label="Balance">Balance</input>
+              </label>
+                    <br>
+                    <label for="feral">
+                <input type="radio" id="feral" name="spec" value="Feral" aria-label="Feral">Feral</input>
+              </label>
+                    <br>
+                    <label for="guardian">
+                <input type="radio" id="guardian" name="spec" value="guardian" aria-label="Guardian">Guardian</input>
+              </label>
+                    <br>
+                    <label for="guardianAndFeralSpecializations">
+                <input type="radio" id="guardianAndFeralSpecializations" name="spec" value="guardianAndFeralSpecializations" aria-label="I can play both Guardian and Feral specializations">I can play both Guardian and Feral specializations</input>
+              </label>
+                    <br>
+                    <label for="multiDruidSpecializations">
+                <input type="radio" id="multiDruidSpecializations" name="spec" value="multiDruidSpecializations" aria-label="I can play both Balance and Restoration specializations">I can play both Balance and Restoration specializations</input>
+              </label>
+                    <br>
+                    <label for="allDruidSpecializations">
+                <input type="radio" id="allDruidSpecializations" name="spec" value="allDruidSpecializations" aria-label="I can play all druid specializations">I can play all druid specializations</input>
+              </label>
+                </div>
+            </div>
+
+            <!-- Warrior -->
+
+            <div id="warriorSpecs" style="display: none;">
+                <div class="form-control">
+                    <h1 class="spec" aria-label="Select a Warrior specialization">Warrior Specializations</h1>
+                    <label for="arms">
+                <input type="radio" id="arms" name="spec" value="Arms" aria-label="Arms">Arms</input>
+              </label>
+                    <br>
+                    <label for="fury">
+                <input type="radio" id="fury" name="spec" value="Fury" aria-label="Fury">Fury</input>
+              </label>
+                    <br>
+                    <label for="protectionWarrior">
+                <input type="radio" id="protectionWarrior" name="spec" value="Protectionwarrior" aria-label="Protection Warrior">Protection Warrior </input>
+              </label>
+                    <br>
+                    <label for="multiWarriorSpecializations">
+                <input type="radio" id="multiWarriorSpecializations" name="spec" value="multiWarriorSpecializations" aria-label="I can play both Arms and Fury specializations">I can play both Arms and Fury specializations</input>
+              </label>
+                    <br>
+                    <label for="tanksAndDpSSpecializations">
+                <input type="radio" id="tanksAndDpSSpecializations" name="spec" value="tanksAndDpSSpecializations" aria-label="I can play both Arms and Protection Warrior specializations">I can play both Arms and Protection Warrior specializations</input>
+              </label>
+                    <br>
+                    <br>
+                    <label for="tanksAndFurySpecializations">
+                <input type="radio" id="tanksAndFurySpecializations" name="spec" value="tanksAndFurySpecializations"> I can play both Fury and Protection Warrior specializations</input>
+              </label>
+                    <br>
+                    <label for="warriorSpecializations">
+                <input type="radio" id="warriorSpecializations" name="spec" value="warriorSpecializations"> I can play all warrior specializations</input>
+              </label>
+                </div>
+            </div>
+
+            <!-- Warcraft Logs -->
             <div class="form-control">
-                <label for="warcraft-logs">
-                    <b>Link your Warcraft Logs</b>
-                </label>
-
-                <!-- multi-line text input control -->
+                <label for="warcraft-logs"><b>Link your Warcraft Logs</b></label>
                 <textarea name="warcraft-logs" id="warcraft-logs" placeholder="Please link your Warcraft Logs" required></textarea>
             </div>
 
+            <!-- Past raiding experience -->
             <div class="form-control">
-                <label for="raiding-experience">
-                    <b>What's your past raiding experience?</b>
-                </label>
-
-                <!-- multi-line text input control -->
-                <textarea name="raiding-experience " id="raiding-experience " placeholder="What 's your past raiding experience?" required></textarea>
+                <label for="raiding-experience"><b>What's your past raiding experience?</b></label>
+                <textarea name="raiding-experience" id="raiding-experience" placeholder="What's your past raiding experience?" required></textarea>
             </div>
 
+            <!-- Reason for joining -->
             <div class="form-control">
-                <label for="why-join">
-                    <b>Why do you want to raid in no idea?</b>
-                </label>
-
-                <!-- multi-line text input control -->
+                <label for="why-join"><b>Why do you want to raid in no idea?</b></label>
                 <textarea name="why-join" id="why-join" placeholder="Why do you want to raid in no idea?" required></textarea>
             </div>
 
-            <div class="form-control">
-                <label>
-                    <b>Can you handle criticism and feedback?</b>
-                </label>
+            <!-- Handle Criticism and Feedback-->
 
-                <!-- Input Type Radio Button -->
-                <label for="handle-criticism">
-                    <input type="radio" id="handle-criticism" name="handle-criticism" value="Yes" required> Yes</input>
-                </label>
-                <label for="handle-criticism">
-                    <input type="radio" id="handle-criticism" name="handle-criticism" value="No"> No</input>
-                </label>
+            <div class="form-control" aria-label="Can you handle criticism and feedback?">
+                <span class="bold-text">Can you handle criticism and feedback?</span>
+                <label for="handle-criticism-yes">
+              <input type="radio" id="handle-criticism-yes" name="handle-criticism" value="Yes" required> Yes
+            </label>
+                <label for="handle-criticism-no">
+              <input type="radio" id="handle-criticism-no" name="handle-criticism" value="No"> No
+            </label>
             </div>
+
+            <!-- Additonal Info -->
 
             <div class="form-control">
                 <label for="Additonal Info">
-                    <b>Anything that you would like to share? Such as
-                    any notable achievements in WoW or other games?</b>
-                </label>
+                <b>Anything that you would like to share? Such as
+                any notable achievements in WoW or other games?</b>
+            </label>
 
                 <!-- multi-line text input control -->
                 <textarea name="Additonal Info" id="Additonal Info" placeholder="Anything to share?"></textarea>
             </div>
 
-            <div class="form-control">
-                <label>
-                    <b>Have you read through our <a href="#charter"> guild charter</a>?</b>
-                </label>
-
-                <!-- Input Type Radio Button -->
-                <label for="read-guild-charter">
-                    <input type="radio" id="read-guild-charter?" name="read-guild-charter?" value="Yes" required>
-                    Yes</input>
-                </label>
-                <label for="read-guild-charter?">
-                    <input type="radio" id="read-guild-charter?" name="read-guild-charter?" value="No"> No</input>
-                </label>
+            <div class="form-control" aria-label="Have you read through our guild charter?">
+                <span class="bold-text">Have you read through our <a href="#charter">guild charter</a>?</span>
+                <label for="read-guild-charter-yes">
+              <input type="radio" id="read-guild-charter-yes" name="read-guild-charter-yes" value="Yes" required> Yes
+            </label>
+                <label for="read-guild-charter-no">
+              <input type="radio" id="read-guild-charter-no" name="read-guild-charter-no" value="No"> No
+            </label>
             </div>
 
             <button class="submitBtn" type="submit" value="submit">
-                Submit
-            </button>
+            Submit
+        </button>
     </div>
-    <!--<a href="#welcome" class="top">Back to top</a> -->
+
+
+    <!-- Arrow Button -->
+    <a href="#welcome" class="back-to-top-btn">Back to Top</a>
     <footer>
         <p>Copyright&copy; 2023 Guild Master of no idea</p>
     </footer>

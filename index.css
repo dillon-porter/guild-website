@@ -23,6 +23,11 @@ body.dark-mode {
     --secondary-text-color: var(--dark-secondary-text-color);
 }
 
+.bold-text {
+    font-weight: bold;
+    color: #000;
+}
+
 .nav-links,
 #welcome h2 {
     color: var(--primary-text-color);
@@ -408,6 +413,12 @@ form h1 {
     font-size: 16px;
 }
 
+.spec {
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
 
 /* Styling form-control input,
 select, textarea */
@@ -620,4 +631,26 @@ input[type="radio"]:checked {
             display: none;
         }
     }
+}
+
+
+/* Back to Top Button Styles */
+
+.back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-to-top-btn:hover {
+    opacity: 1;
 }

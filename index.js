@@ -23,21 +23,36 @@ navLinks.forEach(function(navLink) {
 
 function toggleTheme() {
     const body = document.body;
-    const isDarkMode = body.classList.contains("dark-mode");
+    const theme = localStorage.getItem("theme") || "light";
+    body.classList.toggle("dark-mode", theme === "dark");
+    localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
+}
 
-    if (isDarkMode) {
-        body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
+
+// Add a script to show/hide the arrow button based on scroll position
+const backToTopBtn = document.querySelector('.back-to-top-btn');
+const charterSection = document.getElementById('charter');
+const charterSectionOffset = charterSection.offsetTop;
+
+function updateBackToTopButtonVisibility() {
+    if (window.scrollY > charterSectionOffset) {
+        backToTopBtn.style.display = 'block';
     } else {
-        body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
+        backToTopBtn.style.display = 'none';
     }
 }
 
-// Check the theme preference from localStorage on page load
-window.addEventListener("DOMContentLoaded", () => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-        document.body.classList.add("dark-mode");
-    }
-});
+window.addEventListener('scroll', updateBackToTopButtonVisibility);
+
+// Call the function once on page load to initialize the button's visibility
+updateBackToTopButtonVisibility();
+
+// Add a script to handle scrolling to top when the "Back to Top" button is clicked
+let scrollTimeout;
+
+function onScroll() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(updateBackToTopButtonVisibility, 100);
+}
+
+window.addEventListener('scroll', onScroll);
