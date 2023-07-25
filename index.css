@@ -654,3 +654,36 @@ input[type="radio"]:checked {
 .back-to-top-btn:hover {
     opacity: 1;
 }
+
+
+/* Thank you HTML*/
+
+.container {
+    background-color: #ffffff;
+    /* White background for form container */
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.thankyou-img {
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto 20px;
+}
+
+.thankyou-heading {
+    color: #8A3304;
+    /* Heading color */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.thankyou-description {
+    text-align: center;
+    margin-bottom: 30px;
+}
