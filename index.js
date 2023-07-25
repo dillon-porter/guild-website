@@ -23,10 +23,17 @@ navLinks.forEach(function(navLink) {
 
 function toggleTheme() {
     const body = document.body;
-    const theme = localStorage.getItem("theme") || "light";
-    body.classList.toggle("dark-mode", theme === "dark");
-    localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
+    const theme = localStorage.getItem("theme");
+
+    // If the user's theme preference has not been set, default to dark mode
+    const defaultTheme = theme === null ? "dark" : theme;
+
+    body.classList.toggle("dark-mode", defaultTheme === "dark");
+    localStorage.setItem("theme", defaultTheme === "dark" ? "light" : "dark");
 }
+
+// Call the toggleTheme function on the first load
+toggleTheme();
 
 
 // Add a script to show/hide the arrow button based on scroll position
