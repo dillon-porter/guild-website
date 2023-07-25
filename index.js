@@ -63,3 +63,12 @@ function onScroll() {
 }
 
 window.addEventListener('scroll', onScroll);
+
+
+function handleFormSubmit() {
+    // Redirect to thankyou.html after form submission
+    window.location.href = "/thankyou.html";
+
+    // Prevent default form submission behavior (Netlify will handle the form submission)
+    return false;
+}
