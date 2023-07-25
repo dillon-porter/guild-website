@@ -9,6 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 // Serve the static HTML form file
 app.use(express.static('public'));
 
+// GET route for the root path
+app.get('/', (req, res) => {
+    res.send('Welcome to my application');
+});
+
 // POST route to handle the form submission
 app.post('/submit-form', (req, res) => {
     // Get the form data from the request body
@@ -23,21 +28,12 @@ app.post('/submit-form', (req, res) => {
         },
     });
 
+
     // Email content
     const emailContent = `
     New Form Submission:
     Wow Armory Link: ${formData.wow_armory}
-    Battle.net Link: ${formData['battle.net']}
-    Discord: ${formData.discord}
-    Role: ${formData.role}
-    Class: ${formData.class}
-    Specialization: ${formData.spec}
-    Warcraft Logs Link: ${formData['warcraft-logs']}
-    Raiding Experience: ${formData['raiding-experience']}
-    Reason for Joining: ${formData['why-join']}
-    Can Handle Criticism and Feedback: ${formData['handle-criticism']}
-    Additional Info: ${formData['Additonal Info']}
-    Read Guild Charter: ${formData['read-guild-charter-yes']}
+    // Include other form data here
   `;
 
     // Email options
