@@ -1,6 +1,6 @@
 # guildwebsite
 
-### [Demo](https://dillon-porter.github.io/guild-website)
+### [Demo]([https://dillon-porter.github.io/guild-website](https://noideaguild.netlify.app/))
 
 This is a guild website for World of Warcraft that I built completely from scratch. No libraries or frameworks, just pure HTML, CSS, and JavaScript.
 
