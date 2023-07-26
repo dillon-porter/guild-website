@@ -1,4 +1,3 @@
-// Assuming you have installed express and nodemailer packages
 const express = require('express');
 const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables from .env file
@@ -12,13 +11,18 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    // Serve the index.html file from the public directory
+    res.sendFile('index.html', { root: __dirname + '/public' });
+});
+
 // POST endpoint to handle form submission
 app.post('/submit-form', (req, res) => {
     const { wow_armory, battle_net, discord, role, class: selectedClass, spec, warcraft_logs, raiding_experience, why_join, handle_criticism, additional_info } = req.body;
 
     // Create a Nodemailer transporter using your email credentials
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'hotmail',
         auth: {
             user: process.env.EMAIL_USER, // Use the environment variable for email user
             pass: process.env.EMAIL_PASSWORD // Use the environment variable for email password
