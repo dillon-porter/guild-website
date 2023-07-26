@@ -659,6 +659,10 @@ input[type="radio"]:checked {
 
 /* Thank you HTML*/
 
+#thank_you_body {
+    background-color: #666;
+}
+
 .container {
     background-color: #ffffff;
     /* White background for form container */
