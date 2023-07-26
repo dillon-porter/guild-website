@@ -1,63 +1,60 @@
+// Assuming you have installed express and nodemailer packages
 const express = require('express');
-const app = express();
 const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables from .env file
 
+const app = express();
+const port = 3000;
 
-// Middleware to parse incoming form data
+// Body-parser middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Serve the static HTML form file
-app.use(express.static('public'));
-
-// GET route for the root path
-app.get('/', (req, res) => {
-    res.send('Welcome to my application');
-});
-
-// POST route to handle the form submission
+// POST endpoint to handle form submission
 app.post('/submit-form', (req, res) => {
-    // Get the form data from the request body
-    const formData = req.body;
+    const { wow_armory, battle_net, discord, role, class: selectedClass, spec, warcraft_logs, raiding_experience, why_join, handle_criticism, additional_info } = req.body;
 
-    // Create a Nodemailer transporter
+    // Create a Nodemailer transporter using your email credentials
     const transporter = nodemailer.createTransport({
-        service: 'hotmail', // Update with your email service (e.g., gmail, outlook)
+        service: 'gmail',
         auth: {
-            user: process.env.EMAIL_USERNAME,
-            pass: process.env.EMAIL_PASSWORD,
+            user: process.env.EMAIL_USER, // Use the environment variable for email user
+            pass: process.env.EMAIL_PASSWORD // Use the environment variable for email password
         },
     });
 
-
     // Email content
-    const emailContent = `
-    New Form Submission:
-    Wow Armory Link: ${formData.wow_armory}
-    // Include other form data here
-  `;
-
-    // Email options
     const mailOptions = {
         from: process.env.EMAIL_USER, // Use the environment variable for sender email
         to: process.env.EMAIL_USER, // Use the environment variable for recipient email
-        subject: 'New Subscription',
-        text: emailContent
+        subject: 'New Raider Application',
+        text: `
+      Wow Armory: ${wow_armory}
+      Battle.net: ${battle_net}
+      Discord: ${discord}
+      Role: ${role}
+      Class: ${selectedClass}
+      Specialization: ${spec}
+      Warcraft Logs: ${warcraft_logs}
+      Raiding Experience: ${raiding_experience}
+      Reason for Joining: ${why_join}
+      Can Handle Criticism: ${handle_criticism}
+      Additional Info: ${additional_info}
+    `,
     };
 
-    // Send the email
+    // Send email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error(error);
-            res.status(500).send('Error sending email');
+            console.log(error);
+            res.status(500).send('Error sending email.');
         } else {
-            console.log('Email sent:', info.response);
-            res.status(200).send('Email sent successfully');
+            console.log('Email sent: ' + info.response);
+            res.send('Application submitted successfully!');
         }
     });
 });
-// Start the server
-const port = 3000; // You can change the port if needed
+
 app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(`Server running on port ${port}`);
 });
