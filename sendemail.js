@@ -6,6 +6,8 @@ require('dotenv').config(); // Load environment variables from .env file
 const app = express();
 const port = 3000;
 
+app.use(express.static('public'));
+
 // Body-parser middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
