@@ -42,7 +42,7 @@ const charterSection = document.getElementById('charter');
 const charterSectionOffset = charterSection.offsetTop;
 
 function updateBackToTopButtonVisibility() {
-    if (window.scrollY > charterSectionOffset) {
+    if (window.innerWidth >= 768 && window.scrollY > charterSectionOffset) {
         backToTopBtn.style.display = 'block';
     } else {
         backToTopBtn.style.display = 'none';

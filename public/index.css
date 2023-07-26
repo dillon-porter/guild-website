@@ -516,6 +516,28 @@ input[type="radio"]:checked {
 }
 
 
+/* Back to Top Button Styles */
+
+.back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-to-top-btn:hover {
+    opacity: 1;
+}
+
+
 /* Mobile Main Content*/
 
 @media (max-width: 768px) {
@@ -553,107 +575,90 @@ input[type="radio"]:checked {
     .top {
         display: none;
     }
-    @media (max-width: 400px) {
-        #about {
-            width: 100%;
-            flex-direction: column;
-            margin-top: 100px;
-        }
-        #about h1 {
-            margin-right: 55%;
-            font-size: 1.7rem;
-            border-bottom: 2px solid lightblue;
-            justify-content: left;
-        }
-        #about p {
-            max-width: 300px;
-            padding: 0px;
-            line-height: 1.5rem;
-            font-size: 16px;
-            margin-left: 2%;
-        }
-        .top {
-            display: none;
-        }
-        .top a {
-            display: none;
-        }
-    }
-    @media (max-width: 600px) {
-        #welcome h1 {
-            margin-top: 10px;
-            font-size: 26px;
-            padding: 5px;
-        }
-        #welcome h2 {
-            font-size: 16px;
-            color: var(--clr-orange);
-        }
-        #welcome p {
-            padding: 10px;
-            line-height: 1.5rem;
-            font-size: 14px;
-            margin-left: 2%;
-            text-align: center;
-        }
-        #about {
-            flex-direction: column;
-        }
-        #about h1 {
-            font-size: 1.7rem;
-            margin-left: 0;
-        }
-        #about p {
-            padding-top: 5px;
-            font-size: 15px;
-        }
-        #charter {
-            width: 350px;
-            height: 100vh;
-            margin: 0 auto;
-            height: 100%;
-        }
-        #charter h1 {
-            font-size: 1.7rem;
-            padding-bottom: 5px;
-            color: lightblue;
-        }
-        #charter p {
-            font-size: 15px;
-        }
-        .gallery-title {
-            font-size: 12px;
-            margin-bottom: 0px;
-        }
-        .top {
-            display: none;
-        }
-        .top a {
-            display: none;
-        }
+    .back-to-top-btn {
+        display: none;
     }
 }
 
-
-/* Back to Top Button Styles */
-
-.back-to-top-btn {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+@media (max-width: 400px) {
+    #about {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    #about h1 {
+        margin-right: 55%;
+        font-size: 1.7rem;
+        border-bottom: 2px solid lightblue;
+        justify-content: left;
+    }
+    #about p {
+        max-width: 300px;
+        padding: 0px;
+        line-height: 1.5rem;
+        font-size: 16px;
+        margin-left: 2%;
+    }
+    .top {
+        display: none;
+    }
+    .top a {
+        display: none;
+    }
 }
 
-.back-to-top-btn:hover {
-    opacity: 1;
+@media (max-width: 600px) {
+    #welcome h1 {
+        margin-top: 10px;
+        font-size: 26px;
+        padding: 5px;
+    }
+    #welcome h2 {
+        font-size: 16px;
+        color: var(--clr-orange);
+    }
+    #welcome p {
+        padding: 10px;
+        line-height: 1.5rem;
+        font-size: 14px;
+        margin-left: 2%;
+        text-align: center;
+    }
+    #about {
+        flex-direction: column;
+    }
+    #about h1 {
+        font-size: 1.7rem;
+        margin-left: 0;
+    }
+    #about p {
+        padding-top: 5px;
+        font-size: 15px;
+    }
+    #charter {
+        width: 350px;
+        height: 100vh;
+        margin: 0 auto;
+        height: 100%;
+    }
+    #charter h1 {
+        font-size: 1.7rem;
+        padding-bottom: 5px;
+        color: var(--clr-orange);
+    }
+    #charter p {
+        font-size: 15px;
+    }
+    .gallery-title {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    .top {
+        display: none;
+    }
+    .top a {
+        display: none;
+    }
 }
 
 
