@@ -80,7 +80,7 @@ html {
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     list-style: none;
     text-align: center;
     width: 40%;
@@ -606,7 +606,7 @@ input[type="radio"]:checked {
 }
 
 #recruitment h2 {
-    color: var(--primary-text-color);
+    color: var(--clr-orange);
     margin-bottom: 20px;
     font-size: 2rem;
 }
