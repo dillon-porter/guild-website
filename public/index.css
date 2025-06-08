@@ -355,24 +355,81 @@ html {
 }
 
 #charter {
-    padding-top: 100px;
-    width: 1000px;
-    height: 100vh;
-    margin-top: 35px;
-    align-items: center;
-    justify-content: center;
+    max-width: 1000px;
     margin: 0 auto;
-    height: 100%;
+    padding: 2rem;
+    color: var(--primary-text-color);
+}
+
+#charter {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--primary-text-color);
 }
 
 #charter h1 {
     font-size: 2.5rem;
-    padding-bottom: 5px;
     color: var(--clr-orange);
+    margin-bottom: 1rem;
 }
 
-#charter li {
+#charter h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+#charter h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text-color);
+}
+
+#charter p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.charter-list {
     list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.charter-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+
+/* Base spacing for guideline list */
+
+.guidelines-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.guidelines-list li {
+    margin-bottom: 12px;
+    /* space between each point */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* Nested list (inside Trial Period) */
+
+.guidelines-list li ul {
+    margin-top: 8px;
+    padding-left: 1.5rem;
+}
+
+.guidelines-list li ul li {
+    margin-bottom: 8px;
 }
 
 
@@ -536,6 +593,82 @@ input[type="radio"]:checked {
 
 .back-to-top-btn:hover {
     opacity: 1;
+}
+
+
+/* Recruitment */
+
+#recruitment {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#recruitment h2 {
+    color: var(--primary-text-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.recruitment-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.recruitment-class {
+    background-color: var(--secondary-bg-color);
+    border-left: 6px solid;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recruitment-class .class-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.recruitment-class .need-level {
+    font-size: 0.95rem;
+    color: var(--secondary-text-color);
+}
+
+.recruitment-class.high {
+    border-color: red;
+}
+
+.recruitment-class.medium {
+    border-color: orange;
+}
+
+.recruitment-class.low {
+    border-color: green;
+}
+
+.recruitment-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recruitment-link {
+    background-color: var(--clr-orange);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.recruitment-link:hover {
+    background-color: black;
 }
 
 
