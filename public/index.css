@@ -741,7 +741,18 @@ input[type="radio"]:checked {
 }
 
 .recruitment-link:hover {
-    background-color: var(--clr-black);
+    background-color: #ffa94d;
+    /* Light orange hover */
+    color: #000;
+}
+
+
+/* Optional: Darken font on class items on hover for interactivity */
+
+.recruitment-class:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
 }
 
 
