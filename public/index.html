@@ -218,11 +218,7 @@
                 <span class="need-level">High</span>
             </div>
             <div class="recruitment-class high">
-                <span class="class-name">Aug Evoker</span>
-                <span class="need-level">High</span>
-            </div>
-            <div class="recruitment-class high">
-                <span class="class-name">Boomkin</span>
+                <span class="class-name">Shadow Priest</span>
                 <span class="need-level">High</span>
             </div>
         </div>
@@ -245,15 +241,12 @@
 
             <h1>Raider Application</h1>
             <p style="margin-top:-10px; padding-top:15px; color:#000">
-                We’re a weekend Mythic team focused on steady progression, accountability, and a team-first mindset. We value players who prepare, communicate, and want to improve together.
+                We’re a weekend Mythic team focused on steady progression, accountability, preparation, and a team-first mindset. We want players who are reliable, coachable, and committed to improving with the group over the course of a tier.
             </p>
-
-            <br>
-
             <!-- Links -->
             <div class="form-control">
-                <label for="wow_armory"><b>WoW Armory Link</b></label>
-                <input type="url" name="wow_armory" id="wow_armory" placeholder="https://worldofwarcraft.blizzard.com/..." required />
+                <label for="raider_io"><b>Raider.io link:</b></label>
+                <input type="url" name="raider_io" id="raider_io" placeholder="https://raider.io/.." required />
             </div>
 
             <div class="form-control">
@@ -262,17 +255,14 @@
             </div>
 
             <div class="form-control">
-                <label for="bnet"><b>Battle.net</b></label>
+                <label for="bnet"><b>Battle.net:</b></label>
                 <input type="text" name="bnet" id="bnet" placeholder="Example#12345" required />
             </div>
 
             <div class="form-control">
-                <label for="discord"><b>Discord</b></label>
+                <label for="discord"><b>Discord Username:</b></label>
                 <input type="text" name="discord" id="discord" placeholder="@yourname" required />
             </div>
-
-            <br>
-
             <!-- Character Info -->
             <div class="form-control">
                 <label for="role"><b>Which role are you applying as?</b></label>
@@ -306,21 +296,18 @@
             </div>
 
             <div class="form-control">
-                <label for="spec"><b>Main spec</b></label>
+                <label for="spec"><b>Main spec:</b></label>
                 <input type="text" name="spec" id="spec" placeholder="Example: Shadow / Havoc / Resto / Fury" required />
             </div>
 
             <div class="form-control">
-                <label for="offspec"><b>Off-spec (optional)</b></label>
+                <label for="offspec"><b>Off-spec (optional):</b></label>
                 <input type="text" name="offspec" id="offspec" placeholder="Example: Holy / Vengeance / Balance" />
             </div>
-
-            <br>
-
             <!-- Raid Times (required) -->
             <div class="form-control">
                 <span class="bold-text">
-        Can you commit to our raid times 95% during progression: 11:00 AM – 3:00 PM Eastern on Saturday & Sunday?
+        Can you reliably attend both progression raid days  Saturday & Sunday, 11:00 AM–3:00 PM Eastern with at least 95% attendance?
       </span>
                 <label>
         <input type="radio" name="raid_times_commit" value="Yes" required />
@@ -332,14 +319,10 @@
       </label>
             </div>
 
-
-
             <div class="form-control">
                 <label for="schedule_notes"><b>If you selected “Mostly”, explain briefly (optional)</b></label>
                 <textarea name="schedule_notes" id="schedule_notes" placeholder="Example: I’m available every weekend except once a month due to work." rows="3"></textarea>
             </div>
-
-            <br>
 
             <!-- Experience / Fit -->
             <div class="form-control">
@@ -348,42 +331,21 @@
             </div>
 
             <div class="form-control">
-                <label for="why_join"><b>Why do you want to raid in no idea? Have you ever been part of a team environment before(ex sports)?</b></label>
-                <textarea name="why_join" id="why_join" placeholder="What are you looking for in a weekend CE group?" required rows="4"></textarea>
+                <label for="usually_prepare" "><b>How do you usually prepare for a new boss before first pull?</b></label>
+                <textarea name="usually_prepare " id="usually_prepare "" placeholder="I research the boss mechanics through guides and videos." required rows="5"></textarea>
             </div>
-
-            <br>
-
-            <!-- Competitive Questions -->
             <div class="form-control">
-                <label for="single_target"><b>For single-target encounters, briefly explain why you choose your build and your key rotation priorities.</b></label>
-                <textarea name="single_target" id="single_target" placeholder="4–6 bullets is perfect. Why this build, then your rotation priorities." required rows="5"></textarea>
+                <label for="make_mistake"><b>When you make a mistake that affects a pull, what do you usually do next?</b></label>
+                <textarea name="make_mistake" id="make_mistake" placeholder="I take accountability for my mistakes and work to improve." required rows="6"></textarea>
             </div>
-
             <div class="form-control">
-                <label for="aoe_cleave"><b>Cleave / AoE: What changes and why?</b></label>
-                <textarea name="aoe_cleave" id="aoe_cleave" placeholder="How do talents/rotation/priority change in multi-target?" required rows="5"></textarea>
+                <label for="review_performance"><b>How do you review your own performance after raid?</b></label>
+                <textarea name="review_performance" id="review_performance" placeholder="I reflect on my performance and review warcraft logs." required rows="6"></textarea>
             </div>
-
             <div class="form-control">
-                <label for="improvement"><b>What are you currently working on improving?</b></label>
-                <textarea name="improvement" id="improvement" placeholder="Example: defensive usage, uptime, target swaps, cooldown planning, mechanics consistency." required rows="4"></textarea>
+                <label for="why_are_you_applying"><b>Why are you applying to <b>no idea</b> specifically?</b></label>
+                <textarea name="why_are_you_applying" id="why_are_you_applying" placeholder="I am interested in the guild's progression goals." required rows="6"></textarea>
             </div>
-
-            <br>
-
-            <!-- UI Screenshot -->
-            <div class="form-control">
-                <label for="ui_screenshot"><b>Optional: UI screenshot during a raid encounter</b></label>
-                <input type="text" name="ui_screenshot" id="ui_screenshot" placeholder="Paste an Imgur / Drive / Discord link" />
-            </div>
-
-            <div class="form-control">
-                <label for="ui_notes"><b>How is your UI set up for progression?</b></label>
-                <textarea name="ui_notes" id="ui_notes" placeholder="Short answer: how you track mechanics, defensives, and stay aware." required rows="3"></textarea>
-            </div>
-
-            <br>
 
             <!-- Expectations -->
             <div class="form-control" aria-label="Can you handle criticism and feedback?">
@@ -392,14 +354,19 @@
                 <label><input type="radio" name="criticism_feedback" value="No" /> No</label>
             </div>
 
+            <div class="form-control">
+                <label for="recent_raiding_guilds"><b>What guild(s) have you raided with recently, and why did you leave?</b></label>
+                <textarea name="recent_raiding_guilds" id="recent_raiding_guilds" placeholder="I raided with [Guild Name] and left because..." required rows="6"></textarea>
+            </div>
+
             <div class="form-control" aria-label="Benched for comp reasons">
-                <span class="bold-text">Are you okay with occasionally being benched for comp reasons to help progression?</span>
+                <span class="bold-text">Are you comfortable being rotated or benched when it benefits progression?</span>
                 <label><input type="radio" name="bench_ok" value="Yes" required /> Yes</label>
                 <label><input type="radio" name="bench_ok" value="No" /> No</label>
             </div>
 
             <div class="form-control" aria-label="Committed to Cutting Edge">
-                <span class="bold-text">Are you committed to earning Cutting Edge with us?</span>
+                <span class="bold-text">If accepted after trial, are you intending to remain with the team for the full tier?</span>
                 <label><input type="radio" name="cutting_edge_commit" value="Yes" required /> Yes</label>
                 <label><input type="radio" name="cutting_edge_commit" value="No" /> No</label>
             </div>
@@ -418,8 +385,6 @@
             <button class="submitBtn" type="submit">Submit</button>
         </form>
     </div>
-
-
 
     <!-- Arrow Button -->
     <a href="#welcome" class="back-to-top-btn">Back to Top</a>
